@@ -47,7 +47,7 @@ What things you need to install the software and how to install them.
 ![](./images/m_s3.png)
 
 6. Click Install.
-![](./images/m_s51.png)
+    ![](./images/m_s51.png)
 
 
 #### In Linux <a name = "miniconda-linux"></a>
@@ -56,7 +56,7 @@ What things you need to install the software and how to install them.
 2. RUN
 ```bash
 bash Miniconda3-latest-Linux-x86_64.sh
-```
+```https://github.com/totogoto/pysetup
 or 
 
 ```bash
