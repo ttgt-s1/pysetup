@@ -46,8 +46,9 @@ What things you need to install the software and how to install them.
 5. Select an install for “Just Me”  and click Next.
 ![](./images/m_s3.png)
 
+
 6. Click Install.
-    ![](./images/m_s51.png)
+![](./images/m_s51.png)
 
 
 #### In Linux <a name = "miniconda-linux"></a>
