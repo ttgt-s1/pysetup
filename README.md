@@ -7,7 +7,6 @@
         + [In Windows](#miniconda-windows)
         + [In Linux](#miniconda-linux)
         + [In Mac](#miniconda-mac)
-
     + [Settting Up the environment](#setup)
     + [Downloading & Running Project](#project-setup)
 ## Getting Started <a name="getting_started"></a>
@@ -40,12 +39,14 @@ What things you need to install the software and how to install them.
 2. Double-click the `.exe` file
 3. Click Next.
 ![](./images/m_s1.png)
+
 4. Read the licensing terms and click “I Agree”.
 ![](./images/m_s2.png)
+
 5. Select an install for “Just Me”  and click Next.
 ![](./images/m_s3.png)
 
-6. Click Install
+6. Click Install.
 ![](./images/m_s51.png)
 
 
