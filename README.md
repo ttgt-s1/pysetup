@@ -60,13 +60,18 @@ What things you need to install the software and how to install them.
 
 2. RUN
 ```bash
+
 bash Miniconda3-latest-Linux-x86_64.sh
-```https://github.com/totogoto/pysetup
-or 
+
+```
+
+#or 
 
 ```bash
+
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
+
 ```
 
 #### In Mac OS <a name="miniconda-mac"></a>
