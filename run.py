@@ -2,12 +2,12 @@ import os
 import platform
 import getpass
 import pip
-from shutil import copytree, which
+from shutil import copytree, which, copyfile
 from contextlib import contextmanager
 import requests
 import hashlib
 import sys
-
+import glob
 
 EXERSIZE_PROJECT_REPO = 'https://github.com/totogoto/python-exersices.git'
 SOURCE_FOLDER = 'src'
@@ -93,12 +93,24 @@ def copy_folder(folder_name):
     if not os.path.isdir(DEST_FOLDER):
         os.mkdir(DEST_FOLDER)
     if not os.path.isdir(src_path):
+        print("invalid setup src missing")
         return
     if not os.path.isdir(dest_path):
         copytree(src_path, dest_path)
         print(f"Created {dest_path}.")
     else:
-        print(f"{dest_path} exists.")
+        print(f"{dest_path} exists. Updating")
+        #updating worlds directory
+        copytree(os.path.join(src_path, 'worlds'), os.path.join(
+            dest_path, "worlds"), dirs_exist_ok=True)
+        
+        #adding new files
+        for x in os.listdir(src_path):
+            dst_file = os.path.join(dest_path, x)
+            if x.endswith(".ipynb") and not os.path.isfile(dst_file):
+                copyfile(os.path.join(src_path, x), dst_file)
+                print_orange(f"Added: {dst_file}")
+
 
 
 def find_project_folder(project_str):
@@ -165,12 +177,14 @@ def check_env_is_activated():
         return False
     return True
 
+
 def download_file(url, file_name):
     get_response = requests.get(url, stream=True)
     with open(file_name, 'wb') as f:
         for chunk in get_response.iter_content(chunk_size=1024):
             if chunk:
                 f.write(chunk)
+
 
 def main():
     if check_env_is_activated():
@@ -189,4 +203,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
