@@ -52,7 +52,7 @@ What things you need to install the software and how to install them.
 
 6. Click Install.
 
-    ![](./images/m_s51.png)
+    ![](./images/m_s52.png)
 
 
 #### In Linux <a name = "miniconda-linux"></a>
